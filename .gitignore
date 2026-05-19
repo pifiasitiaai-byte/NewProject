@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local design reference (DEPT scrape — not part of the site)
+Example/
+example/
+
+# Memory / agent state
+.claude/
+memory/

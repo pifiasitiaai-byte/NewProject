@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="light" />
+  <title>E-Commerce | Vantage Logic®</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,800&display=swap">
+  <link rel="stylesheet" href="../css/main.css" />
+  <style>
+    .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--c-border)}
+    .service-card{padding:var(--sp-md);border-right:1px solid var(--c-border);border-bottom:1px solid var(--c-border)}
+    .service-card:nth-child(even){border-right:none}
+    .service-card:nth-last-child(-n+2){border-bottom:none}
+    .service-icon{font-size:2rem;margin-bottom:1rem}
+    .service-name{font-family:var(--f-display);font-size:var(--t-lg);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.5rem;text-transform:uppercase}
+    .service-desc{font-size:var(--t-sm);color:var(--c-text-mid);line-height:1.7}
+    .approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-xl);align-items:center}
+    .approach-visual{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:6rem}
+    @media(max-width:900px){.service-grid{grid-template-columns:1fr}.service-card{border-right:none}.service-card:nth-last-child(-n+2){border-bottom:1px solid var(--c-border)}.service-card:last-child{border-bottom:none}.approach-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div id="page-loader"><div class="loader-inner"><div style="font-family:Archivo,sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.06em;color:#000;">VANTAGE LOGIC®</div><div class="loader-track"><div class="loader-fill"></div></div></div></div>
+<div id="scroll-progress"></div>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <ul class="nav-links">
+      <li class="has-dd"><a href="#">What we do</a>
+        <div class="nav-dd"><a href="brand-media.html">Brand &amp; Media</a><a href="paid-ads.html">Paid Ads</a><a href="ecommerce.html">E-Commerce</a><a href="web-software.html">Web &amp; Software</a></div>
+      </li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="#">Insights</a></li>
+      <li><a href="about.html">Culture</a></li>
+    </ul>
+    <a href="../index.html" class="nav-logo"><img src="../assets/images/logo-dark.svg" alt="Vantage Logic" /></a>
+    <div class="nav-right"><a href="contact.html" class="nav-cta">Contact</a><button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button></div>
+  </div>
+</nav>
+<div id="mobile-menu">
+  <a href="brand-media.html">Brand &amp; Media</a><a href="paid-ads.html">Paid Ads</a><a href="ecommerce.html">E-Commerce</a><a href="web-software.html">Web &amp; Software</a>
+  <a href="work.html">Work</a><a href="about.html">Culture</a><a href="careers.html">Careers</a>
+  <a href="contact.html" class="mob-cta">Contact →</a>
+</div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="upper light" style="margin-bottom:1rem;font-size:var(--t-xs);" data-reveal>What we do</p>
+    <h1 class="page-hl" data-reveal>E-Commerce</h1>
+    <p class="page-sub" data-reveal>We build commerce experiences that convert — from headless storefronts to marketplace integrations. Technology and marketing working together to drive revenue.</p>
+  </div>
+</section>
+
+<section class="section border-b">
+  <div class="wrap">
+    <div class="approach-grid" data-reveal>
+      <div>
+        <p class="upper light" style="margin-bottom:1rem;font-size:var(--t-xs);">The approach</p>
+        <h2 class="t-xl" style="text-transform:uppercase;margin-bottom:var(--sp-md);">Commerce is experience.</h2>
+        <p style="color:var(--c-text-mid);line-height:1.8;margin-bottom:1rem;font-size:var(--t-sm);">The best e-commerce platforms are invisible. Customers find what they want, buy it effortlessly, and come back for more.</p>
+        <p style="color:var(--c-text-mid);line-height:1.8;font-size:var(--t-sm);">We build the infrastructure and the acquisition engine together — so your store doesn't just look great, it grows.</p>
+      </div>
+      <div class="approach-visual" style="background:linear-gradient(135deg,#2a0a1a,#800a3a);">🛒</div>
+    </div>
+  </div>
+</section>
+
+<section class="section border-b off">
+  <div class="wrap">
+    <div style="margin-bottom:var(--sp-lg);" data-reveal>
+      <p class="upper light" style="margin-bottom:0.5rem;font-size:var(--t-xs);">Services</p>
+      <h2 class="t-2xl">What's included</h2>
+    </div>
+    <div class="service-grid" data-stagger>
+      <div class="service-card"><div class="service-icon">🛒</div><div class="service-name">Platform Build</div><div class="service-desc">Shopify Plus, WooCommerce, headless — custom commerce platforms built for scale and conversion.</div></div>
+      <div class="service-card"><div class="service-icon">⚡</div><div class="service-name">Performance</div><div class="service-desc">Site speed, Core Web Vitals, and checkout optimization — removing every friction point between browse and buy.</div></div>
+      <div class="service-card"><div class="service-icon">🔄</div><div class="service-name">Integrations</div><div class="service-desc">ERP, CRM, PIM, and fulfilment — seamless connections between your store and your operations.</div></div>
+      <div class="service-card"><div class="service-icon">📊</div><div class="service-name">Growth Marketing</div><div class="service-desc">Acquisition, retention, and lifecycle marketing built specifically for e-commerce brands.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div class="cta-inner">
+      <h2 class="cta-hl">Ready to grow your store?</h2>
+      <div class="cta-right">
+        <p class="cta-sub">Tell us about your project and we'll put together a tailored proposal within 48 hours.</p>
+        <a href="contact.html" class="btn btn-outline-white">Start the conversation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div><img src="../assets/images/logo-white.svg" alt="Vantage Logic" class="footer-logo-img" loading="lazy" decoding="async" /><p class="footer-tagline">IT and marketing solutions engineered to move your business forward.</p></div>
+      <div class="footer-col"><div class="footer-col-label">Solutions</div><ul><li><a href="brand-media.html">Brand &amp; Media</a></li><li><a href="paid-ads.html">Paid Ads</a></li><li><a href="ecommerce.html">E-Commerce</a></li><li><a href="web-software.html">Tech &amp; Data</a></li></ul></div>
+      <div class="footer-col"><div class="footer-col-label">Company</div><ul><li><a href="about.html">About Us</a></li><li><a href="work.html">Work</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><div class="footer-col-label">Get in touch</div><ul><li><a href="mailto:hello@vantagelogic.com">hello@vantagelogic.com</a></li><li><a href="tel:+15551234567">+1 (555) 123-4567</a></li><li><a href="#">New York, NY</a></li></ul></div>
+    </div>
+    <div class="footer-contact-links"><a href="contact.html">Find an office ↗</a><a href="contact.html">Speak to us ↗</a><a href="#">Subscribe to our newsletter ↗</a></div>
+    <div class="footer-bottom"><p class="footer-copy">&copy; 2025 Vantage Logic®.</p><div class="footer-socials"><a href="#">LinkedIn</a><a href="#">X</a><a href="#">Instagram</a></div></div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
