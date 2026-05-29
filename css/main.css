@@ -656,12 +656,12 @@ h1,h2,h3,h4,h5 {
   width:100%; aspect-ratio:16/10;
   display:flex; align-items:center; justify-content:center;
   background:var(--c-bg-off); position:relative;
-  transition:transform 0.7s var(--ease);
+  transition:transform 0.7s var(--ease), filter 0.7s var(--ease);
   overflow:hidden;
   object-fit:cover;
 }
-img.work-card-img { display:block; }
-.work-card:hover .work-card-img { transform:scale(1.03); }
+img.work-card-img { display:block; filter:grayscale(15%); }
+.work-card:hover .work-card-img { transform:scale(1.04); filter:grayscale(0%); }
 
 /* Overlay on hover */
 .work-card-overlay {
@@ -686,24 +686,34 @@ img.work-card-img { display:block; }
 .work-card:hover .work-card-overlay-bottom { opacity:1; transform:none; }
 
 .work-card-meta {
-  padding:1rem 0; display:flex; flex-direction:column; gap:0.2rem;
+  padding:1.1rem 0 0; display:flex; flex-direction:column; gap:0.45rem;
+}
+.work-card-client {
+  font-size:0.72rem; font-weight:600; letter-spacing:0.16em;
+  text-transform:uppercase; color:var(--c-text-light);
 }
 .work-card-title {
-  font-family:var(--f-body); font-size:var(--t-sm); font-weight:400;
-  line-height:1.4; transition:opacity 0.2s;
+  font-family:var(--f-display); font-size:1.1rem; font-weight:700;
+  letter-spacing:-0.02em; line-height:1.2;
+  margin:0;
+  transition:opacity 0.25s var(--ease);
 }
-.work-card:hover .work-card-title { opacity:0.6; }
-.work-card-client {
-  font-family:var(--f-display); font-size:var(--t-xs); font-weight:700;
-  text-transform:uppercase; letter-spacing:0.04em;
-  color:var(--c-text); margin-top:0.3rem;
+.work-card:hover .work-card-title { opacity:0.55; }
+.work-card-stat {
+  font-size:0.825rem; color:var(--c-text-light); line-height:1.5;
 }
-.work-card-tags { display:flex; gap:0.6rem; flex-wrap:wrap; margin-top:0.2rem; }
+.work-card-tags {
+  display:flex; gap:0.4rem; flex-wrap:wrap; margin-top:0.4rem;
+}
 .work-tag {
-  font-size:var(--t-xs); color:var(--c-text-light);
+  font-size:0.7rem; font-weight:600; letter-spacing:0.06em;
+  color:var(--c-text-light);
+  padding:0.25rem 0.55rem; border:1px solid var(--c-border);
+  border-radius:2px; line-height:1;
+  background:var(--c-bg);
+  transition:border-color 0.3s var(--ease), color 0.3s var(--ease);
 }
-.work-tag::before { content:'( '; }
-.work-tag::after { content:' )'; }
+.work-card:hover .work-tag { border-color:var(--c-text); color:var(--c-text); }
 
 /* Work grid (work page) */
 .work-grid {
@@ -1350,13 +1360,71 @@ img.work-card-img { display:block; }
 .team-name { font-family:var(--f-display); font-size:var(--t-md); font-weight:700; letter-spacing:-0.02em; }
 .team-role { font-size:var(--t-sm); color:var(--c-text-light); margin-top:0.2rem; }
 
-/* Filter buttons */
+/* Filter buttons (default pill style) */
 .filter-bar { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:var(--sp-md); }
 .filter-btn {
   padding:0.45em 1.2em; border-radius:99px; border:1.5px solid var(--c-border);
   font-size:var(--t-sm); font-weight:500; transition:all 0.2s var(--ease); cursor:pointer;
+  background:var(--c-bg); color:var(--c-text);
 }
 .filter-btn:hover, .filter-btn.active { background:var(--c-text); color:#fff; border-color:var(--c-text); }
+
+/* Filter — tab variant (Work page) — minimal, no pills */
+.work-controls {
+  display:flex; align-items:flex-end; justify-content:space-between;
+  gap:1.5rem; margin-bottom:var(--sp-md);
+  padding-bottom:1rem; border-bottom:1px solid var(--c-border);
+  flex-wrap:wrap;
+}
+.work-controls-label { flex-shrink:0; padding-bottom:0.3rem; }
+.filter-bar--tabs { margin:0; gap:0; align-items:center; }
+.filter-bar--tabs .filter-btn {
+  padding:0.4rem 1.1rem; border:none; border-radius:0; background:transparent;
+  font-family:var(--f-display); font-size:0.9rem; font-weight:600;
+  color:var(--c-text-light); letter-spacing:0;
+  position:relative; cursor:pointer;
+  transition:color 0.3s var(--ease);
+  display:inline-flex; align-items:center; gap:0.45rem;
+}
+.filter-bar--tabs .filter-btn::after {
+  content:""; position:absolute; left:1.1rem; right:1.1rem; bottom:-1rem;
+  height:2px; background:var(--c-text);
+  transform:scaleX(0); transform-origin:center;
+  transition:transform 0.3s var(--ease);
+}
+.filter-bar--tabs .filter-btn:hover { background:transparent; color:var(--c-text); }
+.filter-bar--tabs .filter-btn.active {
+  background:transparent; color:var(--c-text); border:none;
+}
+.filter-bar--tabs .filter-btn.active::after { transform:scaleX(1); }
+.filter-count {
+  font-size:0.65rem; font-weight:500; letter-spacing:0.08em;
+  color:var(--c-text-light); padding-top:2px;
+}
+.filter-bar--tabs .filter-btn.active .filter-count { color:var(--c-text-light); }
+
+/* Section variants */
+.section-tight { padding-block:var(--sp-md); }
+.border-t { border-top:1px solid var(--c-border); }
+
+/* Client logo wall */
+.client-logos-head { margin-bottom:var(--sp-md); display:flex; align-items:baseline; gap:1rem; flex-wrap:wrap; }
+.client-logos-hl {
+  font-family:var(--f-display); font-weight:600; font-size:0.95rem;
+  color:var(--c-text-light); letter-spacing:0; margin:0;
+  text-transform:none;
+}
+.client-logos {
+  display:grid; grid-template-columns:repeat(8,1fr); gap:1px;
+  background:var(--c-border); border:1px solid var(--c-border);
+}
+.client-logos img {
+  width:100%; height:90px; padding:1.5rem;
+  object-fit:contain; background:var(--c-bg);
+  filter:grayscale(100%); opacity:0.45;
+  transition:filter 0.4s var(--ease), opacity 0.4s var(--ease);
+}
+.client-logos img:hover { filter:grayscale(0%); opacity:1; }
 
 /* ============================================================
    RESPONSIVE
@@ -1443,6 +1511,11 @@ img.work-card-img { display:block; }
   }
   .accordion-trigger { padding-block:1.1rem; }
   .filter-btn { padding:0.7em 1.4em; }
+  .filter-bar--tabs .filter-btn { padding:0.55rem 0.9rem; }
+  .filter-bar--tabs .filter-btn::after { left:0.9rem; right:0.9rem; }
+  .work-controls { gap:1rem; }
+  .client-logos { grid-template-columns:repeat(4,1fr); }
+  .client-logos img { height:78px; padding:1.1rem; }
 }
 
 /* Small phone — single-column data grids, minimum spacings */
@@ -1459,6 +1532,8 @@ img.work-card-img { display:block; }
   /* Stack insight rows vertically on tiny screens */
   .insight-card--row { grid-template-columns:1fr; gap:0.7rem; }
   .insight-card--row .insight-img-wrap { aspect-ratio:16/9; }
+  .client-logos { grid-template-columns:repeat(2,1fr); }
+  .client-logos img { height:70px; padding:0.9rem; }
   .hero-headline { letter-spacing:-0.04em; }
   .footer-top { padding-bottom:var(--sp-md); }
   .footer-logo-img { height:28px; }
