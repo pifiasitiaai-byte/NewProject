@@ -5,23 +5,12 @@
   <meta name="theme-color" content="#ffffff" />
   <meta name="color-scheme" content="light" />
   <title>Brand & Media | Vantage Logic®</title>
+  <meta name="description" content="Vantage Logic — brand strategy, identity design, video production and content for ambitious businesses." />
   <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,800&display=swap">
   <link rel="stylesheet" href="../css/main.css" />
-  <style>
-    .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--c-border)}
-    .service-card{padding:var(--sp-md);border-right:1px solid var(--c-border);border-bottom:1px solid var(--c-border)}
-    .service-card:nth-child(even){border-right:none}
-    .service-card:nth-last-child(-n+2){border-bottom:none}
-    .service-icon{font-size:2rem;margin-bottom:1rem}
-    .service-name{font-family:var(--f-display);font-size:var(--t-lg);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.5rem;text-transform:uppercase}
-    .service-desc{font-size:var(--t-sm);color:var(--c-text-mid);line-height:1.7}
-    .approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-xl);align-items:center}
-    .approach-visual{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:6rem}
-    @media(max-width:900px){.service-grid{grid-template-columns:1fr}.service-card{border-right:none}.service-card:nth-last-child(-n+2){border-bottom:1px solid var(--c-border)}.service-card:last-child{border-bottom:none}.approach-grid{grid-template-columns:1fr}}
-  </style>
 </head>
 <body>
 <div id="page-loader"><div class="loader-inner"><div style="font-family:Archivo,sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.06em;color:#000;">VANTAGE LOGIC®</div><div class="loader-track"><div class="loader-fill"></div></div></div></div>
@@ -49,37 +38,232 @@
 
 <section class="page-hero">
   <div class="wrap">
-    <p class="upper light" style="margin-bottom:1rem;font-size:var(--t-xs);" data-reveal>What we do</p>
+    <span class="svc-eyebrow" data-reveal>What we do</span>
     <h1 class="page-hl" data-reveal>Brand &amp; Media</h1>
     <p class="page-sub" data-reveal>We build brands that mean something — and the media to make them impossible to ignore. From identity to full-scale production, we create the foundation every business needs to stand out.</p>
   </div>
 </section>
 
+<!-- ========== APPROACH ========== -->
 <section class="section border-b">
   <div class="wrap">
-    <div class="approach-grid" data-reveal>
-      <div>
-        <p class="upper light" style="margin-bottom:1rem;font-size:var(--t-xs);">The approach</p>
-        <h2 class="t-xl" style="text-transform:uppercase;margin-bottom:var(--sp-md);">Brand is strategy, not decoration.</h2>
-        <p style="color:var(--c-text-mid);line-height:1.8;margin-bottom:1rem;font-size:var(--t-sm);">Too many brands are built around aesthetics. We start with positioning — who you are, who you're for, and why you win. Then we make it look exceptional.</p>
-        <p style="color:var(--c-text-mid);line-height:1.8;font-size:var(--t-sm);">Every asset we produce — logo, video, photography — flows from a single coherent brand idea. The result is consistency that builds trust at every touchpoint.</p>
+    <div class="svc-approach" data-reveal>
+      <div class="svc-approach-text">
+        <span class="svc-eyebrow">The approach</span>
+        <h2 class="t-xl" style="text-transform:uppercase;">Brand is strategy, not decoration.</h2>
+        <p>Too many brands are built around aesthetics. We start with positioning — who you are, who you're for, and why you win. Then we make it look exceptional.</p>
+        <p>Every asset we produce — logo, video, photography — flows from a single coherent brand idea. The result is consistency that builds trust at every touchpoint.</p>
       </div>
-      <div class="approach-visual" style="background:linear-gradient(135deg,#111,#2a1a3e);">🎨</div>
+      <div class="svc-approach-img">
+        <img src="../assets/images/features/branding.jpg" alt="Designer working on brand identity boards" loading="lazy" decoding="async" />
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ========== SERVICES (4 cards with SVG icons) ========== -->
 <section class="section border-b off">
   <div class="wrap">
-    <div style="margin-bottom:var(--sp-lg);" data-reveal>
-      <p class="upper light" style="margin-bottom:0.5rem;font-size:var(--t-xs);">Services</p>
+    <div class="svc-head" data-reveal>
+      <span class="svc-eyebrow">Services</span>
       <h2 class="t-2xl">What's included</h2>
     </div>
-    <div class="service-grid" data-stagger>
-      <div class="service-card"><div class="service-icon">🎨</div><div class="service-name">Brand Strategy</div><div class="service-desc">Positioning, messaging frameworks, tone of voice, and competitive differentiation — the thinking behind everything else.</div></div>
-      <div class="service-card"><div class="service-icon">✏️</div><div class="service-name">Identity Design</div><div class="service-desc">Logo, colour palette, typography, and brand guidelines that scale from business card to billboard.</div></div>
-      <div class="service-card"><div class="service-icon">🎬</div><div class="service-name">Video Production</div><div class="service-desc">Brand films, product videos, social content, and campaign assets — scripted, shot, and edited in-house.</div></div>
-      <div class="service-card"><div class="service-icon">📸</div><div class="service-name">Content Strategy</div><div class="service-desc">An editorial plan that connects your brand voice to the channels and content types your audience consumes.</div></div>
+    <div class="svc-services" data-stagger>
+      <div class="svc-card">
+        <div class="svc-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="24" cy="24" r="20"/>
+            <circle cx="24" cy="24" r="12"/>
+            <circle cx="24" cy="24" r="4"/>
+            <line x1="24" y1="4" x2="24" y2="14"/>
+            <line x1="24" y1="34" x2="24" y2="44"/>
+            <line x1="4" y1="24" x2="14" y2="24"/>
+            <line x1="34" y1="24" x2="44" y2="24"/>
+          </svg>
+        </div>
+        <h3 class="svc-card-name">Brand Strategy</h3>
+        <p class="svc-card-desc">Positioning, messaging frameworks, tone of voice, and competitive differentiation — the thinking behind everything else.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 6 L32 6 L36 24 L24 44 L12 24 Z"/>
+            <line x1="24" y1="6" x2="24" y2="36"/>
+            <circle cx="24" cy="22" r="3"/>
+          </svg>
+        </div>
+        <h3 class="svc-card-name">Identity Design</h3>
+        <p class="svc-card-desc">Logo, colour palette, typography, and brand guidelines that scale from business card to billboard.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="6" y="10" width="36" height="28" rx="2"/>
+            <polygon points="20,18 32,24 20,30" fill="currentColor" stroke="none"/>
+            <line x1="14" y1="10" x2="14" y2="38" stroke-dasharray="2 3"/>
+            <line x1="34" y1="10" x2="34" y2="38" stroke-dasharray="2 3"/>
+          </svg>
+        </div>
+        <h3 class="svc-card-name">Video Production</h3>
+        <p class="svc-card-desc">Brand films, product videos, social content, and campaign assets — scripted, shot, and edited in-house.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="10" y="6" width="28" height="36" rx="1"/>
+            <line x1="16" y1="16" x2="32" y2="16"/>
+            <line x1="16" y1="22" x2="32" y2="22"/>
+            <line x1="16" y1="28" x2="28" y2="28"/>
+            <line x1="16" y1="34" x2="22" y2="34"/>
+          </svg>
+        </div>
+        <h3 class="svc-card-name">Content Strategy</h3>
+        <p class="svc-card-desc">An editorial plan that connects your brand voice to the channels and content types your audience consumes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROCESS (4 numbered steps) ========== -->
+<section class="section border-b">
+  <div class="wrap">
+    <div class="svc-head" data-reveal>
+      <span class="svc-eyebrow">How we work</span>
+      <h2 class="t-2xl">From insight to identity, in four steps</h2>
+    </div>
+    <div class="svc-process" data-stagger>
+      <div class="svc-step">
+        <div class="svc-step-num">01 — Discovery</div>
+        <h3 class="svc-step-name">Understand</h3>
+        <p class="svc-step-desc">Stakeholder interviews, customer research, competitive audit, and brand teardown. We surface the truth behind the brief.</p>
+      </div>
+      <div class="svc-step">
+        <div class="svc-step-num">02 — Strategy</div>
+        <h3 class="svc-step-name">Define</h3>
+        <p class="svc-step-desc">Positioning, brand idea, messaging architecture, and tone of voice. A single coherent story everything else hangs from.</p>
+      </div>
+      <div class="svc-step">
+        <div class="svc-step-num">03 — Design</div>
+        <h3 class="svc-step-name">Build</h3>
+        <p class="svc-step-desc">Identity system, type, colour, motion, photography, and full brand guidelines. Every asset designed to scale.</p>
+      </div>
+      <div class="svc-step">
+        <div class="svc-step-num">04 — Launch</div>
+        <h3 class="svc-step-name">Activate</h3>
+        <p class="svc-step-desc">Roll-out plan, internal training, and a governance model so your brand stays consistent long after we hand it over.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CAPABILITIES (list with hover photos) ========== -->
+<section class="section border-b off">
+  <div class="wrap">
+    <div class="svc-head" data-reveal>
+      <span class="svc-eyebrow">Capabilities</span>
+      <h2 class="t-2xl">Every brand asset, in-house</h2>
+    </div>
+    <div class="solutions-list" data-stagger>
+      <a href="#" class="solution-item">
+        <span class="solution-num">01</span>
+        <div class="solution-body">
+          <div class="solution-name">Brand strategy &amp; positioning</div>
+          <div class="solution-sub">Workshops, research, frameworks — the strategic foundation</div>
+        </div>
+        <img src="../assets/images/solutions/brand.jpg" alt="Strategy workspace" class="solution-hover-img" loading="lazy" decoding="async" />
+      </a>
+      <a href="#" class="solution-item">
+        <span class="solution-num">02</span>
+        <div class="solution-body">
+          <div class="solution-name">Logo &amp; identity systems</div>
+          <div class="solution-sub">Marks, wordmarks, lock-ups, and scalable identity kits</div>
+        </div>
+        <img src="../assets/images/features/branding.jpg" alt="Identity design boards" class="solution-hover-img" loading="lazy" decoding="async" />
+      </a>
+      <a href="#" class="solution-item">
+        <span class="solution-num">03</span>
+        <div class="solution-body">
+          <div class="solution-name">Brand guidelines &amp; design systems</div>
+          <div class="solution-sub">Living documents that keep teams consistent at scale</div>
+        </div>
+        <img src="../assets/images/culture/it-certified.jpg" alt="Organised brand documentation" class="solution-hover-img" loading="lazy" decoding="async" />
+      </a>
+      <a href="#" class="solution-item">
+        <span class="solution-num">04</span>
+        <div class="solution-body">
+          <div class="solution-name">Typography &amp; visual language</div>
+          <div class="solution-sub">Custom type, hierarchy, and the rules that make a brand feel proprietary</div>
+        </div>
+        <img src="../assets/images/cases/apple.jpg" alt="Typography sample" class="solution-hover-img" loading="lazy" decoding="async" />
+      </a>
+      <a href="#" class="solution-item">
+        <span class="solution-num">05</span>
+        <div class="solution-body">
+          <div class="solution-name">Photography &amp; art direction</div>
+          <div class="solution-sub">Original imagery — concept to shoot to delivery</div>
+        </div>
+        <img src="../assets/images/cases/burberry.jpg" alt="Brand photography" class="solution-hover-img" loading="lazy" decoding="async" />
+      </a>
+      <a href="#" class="solution-item">
+        <span class="solution-num">06</span>
+        <div class="solution-body">
+          <div class="solution-name">Video &amp; motion design</div>
+          <div class="solution-sub">Brand films, motion identity, social cut-downs — full production in-house</div>
+        </div>
+        <img src="../assets/images/cases/dunkin.jpg" alt="Video production set" class="solution-hover-img" loading="lazy" decoding="async" />
+      </a>
+      <a href="#" class="solution-item">
+        <span class="solution-num">07</span>
+        <div class="solution-body">
+          <div class="solution-name">Campaign concept &amp; execution</div>
+          <div class="solution-sub">Big ideas — from headline to hero asset to channel mix</div>
+        </div>
+        <img src="../assets/images/cases/oldspice.jpg" alt="Campaign creative" class="solution-hover-img" loading="lazy" decoding="async" />
+      </a>
+      <a href="#" class="solution-item">
+        <span class="solution-num">08</span>
+        <div class="solution-body">
+          <div class="solution-name">Content strategy &amp; editorial</div>
+          <div class="solution-sub">A plan for what to say, where, and when — built around your audience</div>
+        </div>
+        <img src="../assets/images/solutions/marketing.jpg" alt="Editorial calendar" class="solution-hover-img" loading="lazy" decoding="async" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FEATURED WORK ========== -->
+<section class="section">
+  <div class="wrap">
+    <div class="svc-head" data-reveal>
+      <span class="svc-eyebrow">Featured work</span>
+      <h2 class="t-2xl">Brand projects we're proud of</h2>
+    </div>
+    <div class="svc-work-grid" data-stagger>
+      <a href="#" class="svc-work-card">
+        <div class="svc-work-img-wrap">
+          <img src="../assets/images/cases/burberry.jpg" alt="Burberry brand refresh" loading="lazy" decoding="async" />
+        </div>
+        <div class="svc-work-cat">Brand Refresh</div>
+        <h3 class="svc-work-title">Burberry — luxury heritage, modernised</h3>
+        <p class="svc-work-stat">+45% brand recall · 32 markets · 18-month roll-out</p>
+      </a>
+      <a href="#" class="svc-work-card">
+        <div class="svc-work-img-wrap">
+          <img src="../assets/images/cases/apple.jpg" alt="Apple identity work" loading="lazy" decoding="async" />
+        </div>
+        <div class="svc-work-cat">Identity System</div>
+        <h3 class="svc-work-title">Apex — product family identity system</h3>
+        <p class="svc-work-stat">7 sub-brands unified · single design system · 2× faster launch</p>
+      </a>
+      <a href="#" class="svc-work-card">
+        <div class="svc-work-img-wrap">
+          <img src="../assets/images/cases/oldspice.jpg" alt="Old Spice campaign work" loading="lazy" decoding="async" />
+        </div>
+        <div class="svc-work-cat">Campaign</div>
+        <h3 class="svc-work-title">Old Spice — heritage brand, sharp new voice</h3>
+        <p class="svc-work-stat">3.2B impressions · 28% sales lift · Cannes shortlist</p>
+      </a>
     </div>
   </div>
 </section>
